@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeToggle from "./ThemeToggle";
+import HireMeForm from "@/components/HireMeForm";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,8 +56,9 @@ export default function RootLayout({
         <main className="mx-auto max-w-5xl px-6 py-10">
           {children}
         </main>
-        <footer className="mx-auto max-w-5xl px-6 py-10 text-sm opacity-80">
-          <p>© {new Date().getFullYear()} Pir Abbas Shah. All rights reserved.</p>
+        <footer className="mx-auto max-w-5xl px-6 py-10">
+          <HireMeForm />
+          <p className="mt-8 text-sm opacity-80">© {new Date().getFullYear()} Pir Abbas Shah. All rights reserved.</p>
         </footer>
       </body>
     </html>
